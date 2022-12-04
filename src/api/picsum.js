@@ -1,6 +1,5 @@
-const API = "https://picsum.photos/v2/list";
+import axios from "../helpers/axios";
 
 export function getPhotos(page = 1, limit = 10) {
-  return fetch(`${API}?page=${page}&limit=${limit}`)
-    .then((response) => response.json());
+  return axios.get(`/v2/list?page=${page}&limit=${limit}`);
 }
