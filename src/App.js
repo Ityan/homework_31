@@ -7,6 +7,8 @@ function App() {
       <ImageList />
     </section>
   );
-}
+};
+
+
 
 export default App;

@@ -6,6 +6,6 @@ const Spiner = () => {
       <div className="spinner"></div>
     </div>
   );
-}
+};
 
 export default Spiner;
