@@ -1,5 +1,5 @@
 import ImageList from "./components/ImagesList";
-import "./css/style.css"
+import "./css/style.css";
 
 function App() {
   return (
@@ -7,8 +7,6 @@ function App() {
       <ImageList />
     </section>
   );
-};
-
-
+}
 
 export default App;

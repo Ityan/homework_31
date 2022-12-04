@@ -2,7 +2,9 @@ import ProtoTypes from "prop-types";
 
 function Button({ onClick, children }) {
   return (
-    <button className="next-btn" onClick={onClick}>{children}</button>
+    <button type="button" className="next-btn" onClick={onClick}>
+      {children}
+    </button>
   );
 }
 

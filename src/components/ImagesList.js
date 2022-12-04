@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import Button from "./Button";
 import Spiner from "./Spiner";
-import { getPhotos } from "../api/picsum.js";
+import { getPhotos } from "../api/picsum";
 
 const ImageList = () => {
   const [isLoading, setLoading] = useState(true);
@@ -10,17 +10,16 @@ const ImageList = () => {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    getPhotos(page)
-      .then((data) => {
-        setPhotos((prevValue) => prevValue.concat(data));
-        setLoading(false);
-      });
+    getPhotos(page).then((data) => {
+      setPhotos((prevValue) => prevValue.concat(data));
+      setLoading(false);
+    });
   }, [page]);
 
   const handleClick = () => {
     setLoading(true);
-    setPage((prevValue) => ++prevValue);
-  }
+    setPage((prevValue) => prevValue + 1);
+  };
 
   return (
     <>
